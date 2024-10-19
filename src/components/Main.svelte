@@ -1,5 +1,25 @@
 <script>
 
+import Step from "./Step.svelte";
+
+let steps = [
+    {
+        name: "Nebula",
+        icon: "fa-solid fa-blog",
+        description: "LoL",
+    },
+    {
+        name: "Marina Bay",
+        icon: "fa-solid fa-hotel",
+        description: "LoL",
+    },
+    {
+        name: "Kyalami",
+        icon: "fa-solid fa-music",
+        description: "LoL",
+    },
+];
+
 </script>
 
 <main class="flex flex-col flex-1 p-4">
@@ -28,8 +48,23 @@
                 Projects I have worked upon
             </h6>
             <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">
-                Wanna have <span class="text-violet-400"> a look </span> at my works.
+                Wanna have <span class="text-violet-400"> a look </span> at my works?
             </h3>
+        </div>
+        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="mx-auto px-4 py-2 rounded-md border border-solid border-white flex items-center gap-2 -mb-4 sm:-mb-0 -mt-10 hover:border-violet-700 duration-200">
+            <i class="fa-regular fa-circle-play" />
+            <p> Watch the video </p>
+        </a>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+            <Step step={steps[0]}>
+                <p> Nebula is a Blog Web Application made using <strong class="text-violet-400"> React | Tailwind | Appwrite</strong>. Users can login and write their own blogs or read others blogs. </p>
+            </Step>
+            <Step step={steps[1]}>
+                <p> Marina Bay is a Hotel Booking website made using <strong class="text-violet-400"> NextJS | React | Sanity.IO | Tailwind | Stripe</strong>. Users can book hotels with regular leave applications. </p>
+            </Step>
+            <Step step={steps[2]}>
+                <p> Kyalami is a music web application made using <strong class="text-violet-400"> Django</strong>. Users can listen to music here. </p>
+            </Step>
         </div>
     </section>
 </main>
